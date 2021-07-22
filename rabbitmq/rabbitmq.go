@@ -40,7 +40,7 @@ func (c *Connection) Channel() (*Channel, error) {
 			// reconnect if not closed by developer
 			for {
 				// wait 1s for connection reconnect
-				time.Sleep(delay * time.Second)
+				//time.Sleep(delay * time.Second)
 
 				ch, err := c.Connection.Channel()
 				if err == nil {
@@ -82,7 +82,7 @@ func Dial(url string) (*Connection, error) {
 			// reconnect if not closed by developer
 			for {
 				// wait 1s for reconnect
-				time.Sleep(delay * time.Second)
+				//time.Sleep(delay * time.Second)
 
 				conn, err := amqp.Dial(url)
 				if err == nil {
